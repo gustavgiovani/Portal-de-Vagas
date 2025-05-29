@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portal de Vagas</title>
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== Cabeçalho ===== -->
+  <header>
+    <div class="container header-content">
+      <div class="logo">Portal de Vagas</div>
+    </div>
+  </header>
+
+  <!-- ===== Conteúdo principal ===== -->
+  <main class="container main-content">
+    <h1>Vagas Disponíveis</h1>
+    <div class="address">Endereço: Rua 7 de Abril, nº 256</div>
+
+    <div class="jobs-container">
+      <!-- Card 1 -->
+      <div class="job-card">
+        <div class="job-header">
+          <div class="job-title">Auxiliar Geral</div>
+        </div>
+        <div class="job-content">
+          <div class="job-salary">Salário: R$ 3.500,00</div>
+          <button class="apply-btn" onclick="showModal()">Candidatar‑se</button>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="job-card">
+        <div class="job-header">
+          <div class="job-title">Auxiliar de Faxina</div>
+        </div>
+        <div class="job-content">
+          <div class="job-salary">Salário: R$ 3.500,00</div>
+          <button class="apply-btn" onclick="showModal()">Candidatar‑se</button>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="job-card">
+        <div class="job-header">
+          <div class="job-title">Ajudante Geral</div>
+        </div>
+        <div class="job-content">
+          <div class="job-salary">Salário: R$ 3.500,00</div>
+          <button class="apply-btn" onclick="showModal()">Candidatar‑se</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== Modal com formulário ===== -->
+    <div id="modal" class="modal" onclick="outsideClick(event)">
+      <div class="modal-content">
+        <span class="close-modal" onclick="hideModal()">&times;</span>
+
+        <form class="application-form" id="candidatura">
+          <h2 class="form-title">Candidatar‑se para a vaga</h2>
+
+          <div class="form-group">
+            <label class="form-label" for="nome">Nome Completo</label>
+            <input class="form-control" type="text" id="nome" required />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="email">E‑mail</label>
+            <input class="form-control" type="email" id="email" required />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="telefone">Telefone</label>
+            <input class="form-control" type="tel" id="telefone" required />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="cpf">CPF</label>
+            <input class="form-control" type="text" id="cpf" required />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="nascimento">Data de Nascimento</label>
+            <input class="form-control" type="date" id="nascimento" required />
+          </div>
+
+          <button class="submit-btn" type="submit">Enviar Candidatura</button>
+
+          <div class="success-message" id="successMessage">
+            Candidatura enviada com sucesso! Entraremos em contato em breve.
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== Rodapé ===== -->
+  <footer>
+    <div class="footer-content">
+      © 2023 Portal de Vagas. Todos os direitos reservados.
+    </div>
+  </footer>
+
+  <!-- JS externo -->
+  <script src="js/script.js"></script>
+</body>
+</html>
