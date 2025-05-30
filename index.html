@@ -4,19 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Portal de Vagas</title>
-  <!-- CSS externo -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- ===== Cabeçalho ===== -->
   <header>
     <div class="container header-content">
       <div class="logo">Portal de Vagas</div>
     </div>
   </header>
 
-  <!-- ===== Conteúdo principal ===== -->
   <main class="container main-content">
     <h1>Vagas Disponíveis</h1>
     <div class="address">Endereço: Rua 7 de Abril, nº 256</div>
@@ -28,7 +25,7 @@
           <div class="job-title">Auxiliar Geral</div>
         </div>
         <div class="job-content">
-          <div class="job-salary">Salário: R$ 3.500,00</div>
+          <div class="job-salary">Salário: R$ 3.500,00</div>
           <button class="apply-btn" onclick="showModal()">Candidatar‑se</button>
         </div>
       </div>
@@ -38,7 +35,7 @@
           <div class="job-title">Auxiliar de Faxina</div>
         </div>
         <div class="job-content">
-          <div class="job-salary">Salário: R$ 3.500,00</div>
+          <div class="job-salary">Salário: R$ 3.500,00</div>
           <button class="apply-btn" onclick="showModal()">Candidatar‑se</button>
         </div>
       </div>
@@ -48,43 +45,43 @@
           <div class="job-title">Ajudante Geral</div>
         </div>
         <div class="job-content">
-          <div class="job-salary">Salário: R$ 3.500,00</div>
+          <div class="job-salary">Salário: R$ 3.500,00</div>
           <button class="apply-btn" onclick="showModal()">Candidatar‑se</button>
         </div>
       </div>
     </div>
 
-    <!-- ===== Modal com formulário ===== -->
+    <!-- Modal -->
     <div id="modal" class="modal" onclick="outsideClick(event)">
       <div class="modal-content">
         <span class="close-modal" onclick="hideModal()">&times;</span>
 
-        <form class="application-form" id="candidatura" action="https://formsubmit.io/send/gustavgiovani566@gmail.com" method="POST">
+        <form class="application-form" id="candidatura" method="POST" action="https://getform.io/f/aejlrkdb">
           <h2 class="form-title">Candidatar‑se para a vaga</h2>
 
           <div class="form-group">
             <label class="form-label" for="nome">Nome Completo</label>
-            <input class="form-control" type="text" name="nome" id="nome" required />
+            <input class="form-control" type="text" name="nome" required />
           </div>
 
           <div class="form-group">
             <label class="form-label" for="email">E‑mail</label>
-            <input class="form-control" type="email" name="email" id="email" required />
+            <input class="form-control" type="email" name="email" required />
           </div>
 
           <div class="form-group">
             <label class="form-label" for="telefone">Telefone</label>
-            <input class="form-control" type="tel" name="telefone" id="telefone" required />
+            <input class="form-control" type="tel" name="telefone" required />
           </div>
 
           <div class="form-group">
             <label class="form-label" for="cpf">CPF</label>
-            <input class="form-control" type="text" name="cpf" id="cpf" required />
+            <input class="form-control" type="text" name="cpf" required />
           </div>
 
           <div class="form-group">
             <label class="form-label" for="nascimento">Data de Nascimento</label>
-            <input class="form-control" type="date" name="nascimento" id="nascimento" required />
+            <input class="form-control" type="date" name="nascimento" required />
           </div>
 
           <button class="submit-btn" type="submit">Enviar Candidatura</button>
@@ -97,14 +94,24 @@
     </div>
   </main>
 
-  <!-- ===== Rodapé ===== -->
   <footer>
     <div class="footer-content">
       © 2023 Portal de Vagas. Todos os direitos reservados.
     </div>
   </footer>
 
-  <!-- JS externo -->
-  <script src="js/script.js"></script>
+  <script>
+    function showModal() {
+      document.getElementById('modal').style.display = 'block';
+    }
+    function hideModal() {
+      document.getElementById('modal').style.display = 'none';
+    }
+    function outsideClick(event) {
+      if (event.target.id === 'modal') {
+        hideModal();
+      }
+    }
+  </script>
 </body>
 </html>
